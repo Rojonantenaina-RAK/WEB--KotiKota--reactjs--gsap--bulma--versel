@@ -17,6 +17,8 @@ function App() {
         >
           Learn React
         </a>
+        {["Rojo", " ", "Andry"]}
+        {logo}
       </header>
     </div>
   );
