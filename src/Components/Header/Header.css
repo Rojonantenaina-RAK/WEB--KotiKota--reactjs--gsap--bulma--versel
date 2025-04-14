@@ -1,0 +1,158 @@
+        /* --GENERAL-- */
+nav {
+    background-color: #16243D !important;
+    border-bottom: 1px solid #F5F4F5;
+}
+
+nav > .navbar-brand > a#logo {
+    background: no-repeat center / cover url(./../../Assets/Logos/Koti\ Kota.png);
+}
+
+nav > .navbar-menu {
+    background: #16243D;
+}
+
+nav > .navbar-menu > .navbar-end > a.custom-navbar-item {
+    color: #F5F4F5;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 0.75;
+    line-height: 1.5;
+    padding: .5rem .75rem;
+    position: relative;
+}
+
+nav > .navbar-menu > .navbar-end > a.custom-navbar-item:hover {
+    text-decoration: underline;
+}
+
+nav > .navbar-brand > a.navbar-burger {
+    margin-right: 0;
+}
+
+nav > .navbar-brand > a.navbar-burger > span.smallWhiteLine {
+    color: #F5F4F5;
+    
+}
+
+
+nav > .navbar-menu > .navbar-end > .is-flex > a[href='#Contact'] {
+    border: none;
+    color: #F5F4F5;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, white -400%, #EE7061 100%);
+}
+
+nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left {
+    margin-left: 28px;
+}
+
+nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select {
+    background: none;
+}
+
+nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select > select {
+    border: none;
+    background: #F5F4F5;
+    border-radius: 20px;
+}
+
+
+        /* --RESPONSIVE-- */
+
+/* Mobile */
+@media all and (max-width: 768px) {
+    nav {
+        height: 60px;
+    }
+    nav > .navbar-brand {
+        height: 60px;
+        margin-right: 18px;
+    }
+    nav > .navbar-brand > a#logo {
+        width: 46px;
+        height: 46px;
+        margin-top: 7px;
+        margin-left: 18px;
+    }
+    nav > .navbar-menu > .navbar-end > .is-flex {
+        margin-left: 10px;
+    }
+}
+
+/* Tablet++ */
+@media all and (min-width: 769px) {
+    nav {
+        height: 90px;
+    }
+    nav > .navbar-brand {
+        height: 90px;
+    }
+    nav > .navbar-brand > a#logo {
+        width: 70px;
+        height: 70px;
+        margin-top: 10px;
+    }
+}
+
+/* Touch */
+@media all and (max-width: 1023px) {
+    nav > .navbar-menu > .navbar-end > a.custom-navbar-item {
+        display: block;
+    }
+}
+
+/* Tablet-only (padding) */
+@media all and (min-width: 769px) and (max-width: 1023px) {
+    
+    a.navbar-burger {
+        transform: scale(1.5);
+    }
+    nav > .navbar-brand {
+        margin-right: 90px;
+    }
+    nav > .navbar-brand > a#logo {
+        margin-left: 90px;
+    }
+    nav > .navbar-menu > .navbar-end > * {
+        margin-left: 90px;
+    }
+}
+
+/* Desktop++ */
+@media all and (min-width: 1024px) {
+    nav > .navbar-brand > a#logo {
+        margin-left: 192px;
+    }
+    nav > .navbar-menu {
+        margin-right: 192px;
+    }
+
+    nav > .navbar-menu > .navbar-end > a.custom-navbar-item {
+        display: flex;
+        align-items: center;
+    }
+
+    nav > .navbar-menu > .navbar-end > * {
+        margin-left: 70px;
+    }
+
+    nav > .navbar-menu > .navbar-end > .is-flex > a[href='#Contact'] {
+        height: 60px;
+        padding: 24px 28px;
+    }
+
+    nav > .navbar-menu > .navbar-end > .is-flex > a.button , nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left {
+        margin-top: 15px;
+    }
+
+    nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select > select {
+        height: 60px;
+    }
+    nav > .navbar-menu > .navbar-end > .is-flex > .control.control.has-icons-left > span.icon.is-left {
+        margin-top: 10px;
+    }
+    nav > .navbar-menu > .navbar-end > .is-flex > .control.control.has-icons-left > .select.is-dark::after {
+        margin-top: 4px;
+    }
+}

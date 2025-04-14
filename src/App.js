@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+//Bulma
+import './../node_modules/bulma/css/bulma.min.css';
+// Gsap
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+// import {ScrollToPlugin} from 'gsap/all';
+
+// Components
+import Header from './Components/Header/Header';
+import Main from './Components/Main/Main';
+
+
+
+gsap.registerPlugin(useGSAP)
+// gsap.registerPlugin(ScrollToPlugin);
 
 function App() {
+
+  useGSAP( ()=> {
+    //
+  } );
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App has-navbar-fixed-top">
+      <Header />
+      <Main />
+
     </div>
   );
 }
