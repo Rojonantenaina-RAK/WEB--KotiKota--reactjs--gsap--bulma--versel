@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 
 // CSS
 import './Header.css'
@@ -18,14 +18,48 @@ export default function Header() {
 
     let [stateIsActive, setStateIsActive] = useState(false);
     function toggleMenu() {
-        setStateIsActive(!stateIsActive)
+        setStateIsActive( (prev) => !prev )
     }
+
+    const menuRef = useRef(null); // pour détecter les clics en dehors
+    const burgerRef = useRef(null);
+
+    useEffect(() => {
+        // Fermer le menu au scroll
+        const handleScroll = () => {
+          if (stateIsActive) {
+            setStateIsActive(false);
+          }
+        };
+    
+        // Fermer le menu si clic en dehors du menu ou du burger
+        const handleClickOutside = (event) => {
+          if (
+            menuRef.current &&
+            !menuRef.current.contains(event.target) &&
+            burgerRef.current &&
+            !burgerRef.current.contains(event.target)
+          ) {
+            setStateIsActive(false);
+          }
+        };
+    
+        if (stateIsActive) {
+          window.addEventListener('scroll', handleScroll);
+          document.addEventListener('mousedown', handleClickOutside);
+        }
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, [stateIsActive]);
 
   return (
     <nav className='navbar is-fixed-top' role='navigation' aria-label='main navigation'>
         <div className="navbar-brand">
             <a id='logo' className="navbar-item" onClick={scrollToTop}></a>
-            <a onClick={toggleMenu} className={`navbar-burger ${stateIsActive ? 'is-active' : ''}`} role="button" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+            <a onClick={toggleMenu} ref={burgerRef} className={`navbar-burger ${stateIsActive ? 'is-active' : ''}`} role="button" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
                 <span className='smallWhiteLine' aria-hidden="true"></span>
                 <span className='smallWhiteLine' aria-hidden="true"></span>
                 <span className='smallWhiteLine' aria-hidden="true"></span>
@@ -33,7 +67,7 @@ export default function Header() {
             </a>
         </div>
 
-        <div className={`navbar-menu ${stateIsActive ? 'is-active' : ''}`}>
+        <div ref={menuRef} className={`navbar-menu ${stateIsActive ? 'is-active' : ''}`}>
             <div className="navbar-end">
                 <a href="#Services" className='custom-navbar-item'>Nos services</a>
                 <a href="#Partenaires" className='custom-navbar-item'>Partenaires</a>
