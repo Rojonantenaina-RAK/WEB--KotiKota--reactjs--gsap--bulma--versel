@@ -13,13 +13,14 @@ nav > .navbar-menu {
 }
 
 nav > .navbar-menu > .navbar-end > a.custom-navbar-item {
-    color: #F5F4F5;
+    gap: 0.75;
     flex-grow: 0;
     flex-shrink: 0;
-    gap: 0.75;
     line-height: 1.5;
-    padding: .5rem .75rem;
+    color: #F5F4F5;
+    font-weight: 500;
     position: relative;
+    padding: .5rem .75rem;
 }
 
 nav > .navbar-menu > .navbar-end > a.custom-navbar-item:hover {
@@ -33,6 +34,10 @@ nav > .navbar-brand > a.navbar-burger {
 nav > .navbar-brand > a.navbar-burger > span.smallWhiteLine {
     color: #F5F4F5;
     
+}
+
+nav > .navbar-menu {
+    padding: 0.8rem 0;
 }
 
 
@@ -78,6 +83,7 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
     nav > .navbar-menu > .navbar-end > .is-flex {
         margin-left: 10px;
     }
+
 }
 
 /* Tablet++ */
@@ -92,6 +98,10 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
         width: 70px;
         height: 70px;
         margin-top: 10px;
+    }
+    /* font-size */
+    a.custom-navbar-item, nav a[href='#Contact'] {
+        font-size: 14px;
     }
 }
 
@@ -116,6 +126,9 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
     }
     nav > .navbar-menu > .navbar-end > * {
         margin-left: 90px;
+    }    /* font-size */
+    a.custom-navbar-item, nav a[href='#Contact'] {
+        font-size: 16px;
     }
 }
 
@@ -142,10 +155,6 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
         padding: 24px 28px;
     }
 
-    nav > .navbar-menu > .navbar-end > .is-flex > a.button , nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left {
-        margin-top: 15px;
-    }
-
     nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select > select {
         height: 60px;
     }
@@ -154,5 +163,9 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
     }
     nav > .navbar-menu > .navbar-end > .is-flex > .control.control.has-icons-left > .select.is-dark::after {
         margin-top: 4px;
+    }
+    /* font-size */
+    a.custom-navbar-item, nav a[href='#Contact'] {
+        font-size: 19px;
     }
 }

@@ -9,6 +9,7 @@ import './Accueil.css'
 export default function Main() {
   return (
     <div>
+        {/* section 1 : accueil */}
         <section id="Accueil" style={{backgroundColor: '#16243D'}}>
           <p className='bienvenue'>Bienvenue chez <span id="logoKoti"></span><span id="logoKota"></span></p>
           <p className="presentation">Votre Partenaire en Assistance et Support Client</p>
@@ -19,6 +20,8 @@ export default function Main() {
             <a href="#Contact" className="button">Nous contacter</a>
           </div>
         </section>
+
+        {/* section 2 : services */}
         <section id="Services" style={{height: '100vh', backgroundColor: 'black'}}></section>
     </div>
   )

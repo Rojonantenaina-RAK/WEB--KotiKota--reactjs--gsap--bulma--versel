@@ -40,12 +40,19 @@ section#Accueil a[href='#Contact'] {
     background-image: linear-gradient(to right, white -400%, #EE7061 100%);
 }
 
+section#Accueil a.button {
+    border-radius: 20px;
+}
+
         /* --RESPONSIVE */
 /* Mobile */
 @media all and (max-width: 768px) {
     #Accueil {
         margin-top: 60px;
         padding: 70px 18px;
+    }
+    section#Accueil > p.bienvenue {
+        font-size: 14px;
     }
     section#Accueil span#logoKoti {
         width: 87.5px;
@@ -57,6 +64,10 @@ section#Accueil a[href='#Contact'] {
     }
     section#Accueil > p.presentation {
         margin: 26px 0;
+        font-size: 20px;
+    }
+    section#Accueil > p.description {
+        font-size: 14px;
     }
     section#Accueil > .buttons {
         flex-direction: column;
@@ -67,34 +78,36 @@ section#Accueil a[href='#Contact'] {
     }
     section#Accueil > .buttons > a.button {
         width: 100%;
+        font-size: 14px;
     }
 
 }
 
 /* Tablet-only */
 @media all and (min-width: 769px) and (max-width: 1023px) {
-    #Accueil {
-        padding: 70px 90px;
+    section#Accueil {
+        padding: 105px 90px 185px;
+    }
+
+    section#Accueil > p.bienvenue {
+        font-size: 16px;
     }
     section#Accueil span#logoKoti {
-        width: 87.5px;
-        height: 22px;
+        width: 117px;
+        height: 30px;
     }
     section#Accueil span#logoKota {
-        width: 87.5px;
-        height: 22px;
+        width: 117px;
+        height: 30px;
     }
     section#Accueil > p.presentation {
-        margin: 26px 0;
+        font-size: 30px;
     }
-    section#Accueil > .buttons {
-        flex-direction: row;
-        justify-content: center;
-        gap: 30px;
-        margin: 70px 0 0;
+    section#Accueil > p.description {
+        font-size: 16px;
     }
     section#Accueil > .buttons > a.button {
-        width: 270px;
+        font-size: 16px;
     }
 
 }
@@ -104,32 +117,45 @@ section#Accueil a[href='#Contact'] {
     #Accueil {
         margin-top: 90px;
     }
-    #Accueil {
-        padding: 70px 90px;
-    }
-    section#Accueil span#logoKoti {
-        width: 87.5px;
-        height: 22px;
-    }
-    section#Accueil span#logoKota {
-        width: 87.5px;
-        height: 22px;
-    }
     section#Accueil > p.presentation {
-        margin: 26px 0;
+        margin: 50px 0 77px;
     }
     section#Accueil > .buttons {
         flex-direction: row;
         justify-content: center;
         gap: 30px;
-        margin: 70px 0 0;
+        margin: 77px 0 0;
     }
     section#Accueil > .buttons > a.button {
         width: 270px;
+        height: 60px;
     }
 }
 
 /* Desktop++ */
 @media all and (min-width: 1024px) {
+    section#Accueil {
+        padding: 105px 192px 185px;
+    }
+    section#Accueil > p.bienvenue {
+        font-size: 24px;
+    }
+    section#Accueil > p.presentation {
+        font-size: 48px;
+    }
+    section#Accueil > p.description {
+        font-size: 20px;
+    }
+    section#Accueil span#logoKoti {
+        width: 175px;
+        height: 44px;
+    }
+    section#Accueil span#logoKota {
+        width: 175px;
+        height: 44px;
+    }
+    section#Accueil a.button {
+        font-size: 20px;
+    }
 
 }
