@@ -117,6 +117,9 @@ section#Accueil a.button {
     #Accueil {
         margin-top: 90px;
     }
+    section#Accueil span#logoKoti {
+        margin-left: 17.5px;
+    }
     section#Accueil > p.presentation {
         margin: 50px 0 77px;
     }

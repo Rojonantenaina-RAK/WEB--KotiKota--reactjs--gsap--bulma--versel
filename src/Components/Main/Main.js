@@ -2,9 +2,13 @@ import React from 'react';
 
 // Images
 import arrow from './../../Assets/Icons/Right-up.png';
+import Photo1 from './../../Assets/Photos/Photo 1.png';
+import Photo2 from './../../Assets/Photos/Photo 2.png';
+import Photo3 from './../../Assets/Photos/Photo 3.png';
 
 // CSS
-import './Accueil.css'
+import './Accueil.css';
+import './Services.css';
 
 export default function Main() {
   return (
@@ -22,7 +26,55 @@ export default function Main() {
         </section>
 
         {/* section 2 : services */}
-        <section id="Services" style={{height: '100vh', backgroundColor: 'black'}}></section>
+        <section id="services">
+          <h2 id='Services'>Nos services</h2>
+
+          <section className="section-a section-a1 section-non-reversed">
+            <section className="section-a1-1">
+              <h3>Assistance Virtuelle</h3>
+              <p>Besoin d’un assistant personnel pour gérer vos tâches quotidiennes ? Nos experts vous aident avec :
+                <br />
+                <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  La gestion de vos emails et agendas<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Le support client en ligne (</strong>chat, email, réseaux sociaux <strong>)</strong></span>
+                <br />
+                <i>“Restez concentré uniquement sur ce qui vous est essentiel”.</i>
+              </p>
+              <a href="#Contact" className="button is-rounded">Contactez-nous</a>
+            </section>
+            <section className="section-a1-2"><img src={Photo1} alt="Assistance Virtuelle" /></section>
+          </section>
+
+          <section className="section-a section-a2 section-reversed">
+          <section className="section-a1-1">
+              <h3>Service Client Externalisé</h3>
+              <p>Nous prenons en charge votre relation client à 100% :
+                <br/>
+                <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Support client 24/7 (</strong>chat, téléphone, email<strong>)</strong><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Réponses aux questions et gestion des réclamations<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Fidélisation et satisfaction client</strong></span>
+                <br/>
+                <i>“Améliorez votre relation client avec notre service d’excellence”.</i>
+              </p>
+              <a href="#Contact" className="button is-rounded">Contactez-nous</a>
+            </section>
+            <section className="section-a1-2"><img src={Photo2} alt="Service Client Externalisé" /></section>
+          </section>
+
+          <section className="section-a section-a3 section-non-reversed">
+          <section className="section-a1-1">
+              <h3>Gestion de SAV Externalisé</h3>
+              <p>Simplifiez la gestion des retours et des réclamations grâce à nos solutions :
+                <br/>
+                <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Suivi des retours et échanges de produits<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Assistance technique et logistique<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Réparations et remboursements simplifiés</strong></span>
+                <br/>
+                <i>“Un après-vente sans stress”.</i>
+              </p>
+              <a href="#Contact" className="button is-rounded">Contactez-nous</a>
+            </section>
+            <section className="section-a1-2"><img src={Photo3} alt="Gestion de SAV Externalisé" /></section>
+          </section>
+        </section>
+
+        {/* section 3 : partenaires */}
+        {/* section 4 : contacts */}
+        {/* section 5 : temoignages */}
     </div>
   )
 }
