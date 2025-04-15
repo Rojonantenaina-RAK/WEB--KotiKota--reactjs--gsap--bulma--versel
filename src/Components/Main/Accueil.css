@@ -1,0 +1,135 @@
+        /* GENERAL */
+section#Accueil span#logoKoti {
+    display: inline-block;
+    background: no-repeat center / cover  url(./../../Assets/Logos/Koti.png);
+    margin-left: 5px;
+}
+
+section#Accueil span#logoKota {
+    display: inline-block;
+    background: no-repeat center / cover  url(./../../Assets/Logos/Kota.png);
+}
+
+section#Accueil > p.bienvenue {
+    color: #F5F4F5;
+}
+
+section#Accueil > p.presentation {
+    color: #F5F4F5;
+    font-weight: 900;
+}
+
+section#Accueil > p.description {
+    color: #F5F4F5;
+}
+
+.orange-bold {
+    color: #EE7061;
+    font-weight: bold;
+}
+
+section#Accueil a[href='#Services'] {
+    color: #16243D;
+    background: #F5F4F5;
+    border: none;
+}
+
+section#Accueil a[href='#Contact'] {
+    color: #F5F4F5;
+    border: none;
+    background-image: linear-gradient(to right, white -400%, #EE7061 100%);
+}
+
+        /* --RESPONSIVE */
+/* Mobile */
+@media all and (max-width: 768px) {
+    #Accueil {
+        margin-top: 60px;
+        padding: 70px 18px;
+    }
+    section#Accueil span#logoKoti {
+        width: 87.5px;
+        height: 22px;
+    }
+    section#Accueil span#logoKota {
+        width: 87.5px;
+        height: 22px;
+    }
+    section#Accueil > p.presentation {
+        margin: 26px 0;
+    }
+    section#Accueil > .buttons {
+        flex-direction: column;
+        margin: 70px 0 0;
+    }
+    section#Accueil a[href='#Services'] {
+        margin-bottom: 10px;
+    }
+    section#Accueil > .buttons > a.button {
+        width: 100%;
+    }
+
+}
+
+/* Tablet-only */
+@media all and (min-width: 769px) and (max-width: 1023px) {
+    #Accueil {
+        padding: 70px 90px;
+    }
+    section#Accueil span#logoKoti {
+        width: 87.5px;
+        height: 22px;
+    }
+    section#Accueil span#logoKota {
+        width: 87.5px;
+        height: 22px;
+    }
+    section#Accueil > p.presentation {
+        margin: 26px 0;
+    }
+    section#Accueil > .buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        margin: 70px 0 0;
+    }
+    section#Accueil > .buttons > a.button {
+        width: 270px;
+    }
+
+}
+
+/* Tablet++ */
+@media all and (min-width: 769px) {
+    #Accueil {
+        margin-top: 90px;
+    }
+    #Accueil {
+        padding: 70px 90px;
+    }
+    section#Accueil span#logoKoti {
+        width: 87.5px;
+        height: 22px;
+    }
+    section#Accueil span#logoKota {
+        width: 87.5px;
+        height: 22px;
+    }
+    section#Accueil > p.presentation {
+        margin: 26px 0;
+    }
+    section#Accueil > .buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        margin: 70px 0 0;
+    }
+    section#Accueil > .buttons > a.button {
+        width: 270px;
+    }
+}
+
+/* Desktop++ */
+@media all and (min-width: 1024px) {
+
+}
