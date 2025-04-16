@@ -41,7 +41,7 @@ nav > .navbar-menu {
 }
 
 
-nav > .navbar-menu > .navbar-end > .is-flex > a[href='#Contact'] {
+nav > .navbar-menu > .navbar-end > .is-flex > a#linkToContact {
     border: none;
     color: #F5F4F5;
     border-radius: 20px;
@@ -100,7 +100,7 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
         margin-top: 10px;
     }
     /* font-size */
-    a.custom-navbar-item, nav a[href='#Contact'] {
+    a.custom-navbar-item, nav a#linkToContact {
         font-size: 14px;
     }
 }
@@ -127,7 +127,7 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
     nav > .navbar-menu > .navbar-end > * {
         margin-left: 90px;
     }    /* font-size */
-    a.custom-navbar-item, nav a[href='#Contact'] {
+    a.custom-navbar-item, nav a#linkToContact {
         font-size: 16px;
     }
 }
@@ -150,7 +150,7 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
         margin-left: 70px;
     }
 
-    nav > .navbar-menu > .navbar-end > .is-flex > a[href='#Contact'] {
+    nav > .navbar-menu > .navbar-end > .is-flex > a#linkToContact {
         height: 60px;
         padding: 24px 28px;
     }
@@ -165,7 +165,7 @@ nav > .navbar-menu > .navbar-end > .is-flex > .control.has-icons-left > .select 
         margin-top: 4px;
     }
     /* font-size */
-    a.custom-navbar-item, nav a[href='#Contact'] {
+    a.custom-navbar-item, nav a#linkToContact {
         font-size: 19px;
     }
 }

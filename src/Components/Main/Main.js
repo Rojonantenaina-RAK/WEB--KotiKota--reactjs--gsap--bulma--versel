@@ -78,6 +78,7 @@ export default function Main() {
           </section>
         </section>
 
+
         {/* section 3 : partenaires */}
         <section id="partenaires">
           <h2 id='Partenaires'>Nos partenaires</h2>

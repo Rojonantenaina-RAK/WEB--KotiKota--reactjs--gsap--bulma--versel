@@ -7,7 +7,7 @@ import './Header.css'
 import iconLanguage from './../../Assets/Icons/Language.png'
 
 
-export default function Header() {
+export default function Header(props) {
 
     function scrollToTop() {
         window.scrollTo({
@@ -69,10 +69,10 @@ export default function Header() {
 
         <div ref={menuRef} className={`navbar-menu ${stateIsActive ? 'is-active' : ''}`}>
             <div className="navbar-end">
-                <a href="#Services" className='custom-navbar-item'>Nos services</a>
-                <a href="#Partenaires" className='custom-navbar-item'>Partenaires</a>
+                <a onClick={()=>props.scrollToSection('Services')} className='custom-navbar-item'>Nos services</a>
+                <a onClick={()=>props.scrollToSection('Partenaires')} className='custom-navbar-item'>Partenaires</a>
                 <div className="is-flex">
-                    <a href='#Contact' className='button'>Nous contacter</a>
+                    <a id='linkToContact' onClick={()=>props.scrollToSection('Contact')} className='button'>Nous contacter</a>
                     <div className="control has-icons-left">
                         <span className="icon is-left"><img src={iconLanguage} alt="Langue" /></span>
                         <div className="select is-dark">

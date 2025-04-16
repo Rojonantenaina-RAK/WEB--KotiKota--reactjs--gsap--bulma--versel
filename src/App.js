@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 //Smooth scroll (with GSAP and Lenis)
 import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
 
@@ -12,10 +13,23 @@ import './../node_modules/bulma/css/bulma.min.css';
 // Components
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
+import Footer from './Components/Footer/Footer';
 
-gsap.registerPlugin(ScrollTrigger);
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 function App() {
+
+  const scrollToSection = (id) => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {
+        y: `#${id}`,
+        offsetY: 100,
+      },
+      ease: 'power2.inOut',
+    });
+  };
 
   const lenisRef = useRef(null);
 
@@ -64,11 +78,14 @@ function App() {
   }, []);
 
 
+  // 
+
+
   return (
     <div className="App has-navbar-fixed-top">
-      <Header />
+      <Header scrollToSection={scrollToSection} />
       <Main />
-
+      <Footer />
     </div>
   );
 }
