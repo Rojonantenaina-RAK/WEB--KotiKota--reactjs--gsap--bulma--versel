@@ -9,6 +9,7 @@ section#contact > h2 {
 }
 
 section#contact p.appelez-nous {
+    color: #F5F4F5;
     font-size: 14px;
     margin: 25px 0;
     text-align: center;
@@ -72,5 +73,117 @@ section#contact textarea {
     }
     section#contact h2 {
         font-size:30px ;
+    }
+    section#contact p.appelez-nous {
+        font-size: 16px;
+        margin: 50px 0;
+    }
+    
+    section#contact .info-contact {
+        color: #16243D;
+        font-size: 16px;
+        padding: 5px 10px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 550px;
+        height: 50px;
+    }
+    section#contact .info-contact.email {
+        margin: 20px auto 50px;
+    }
+    
+    section#contact .info-contact > img {
+        width: 35px;
+        height: 35px;
+    }
+    section#contact .info-contact > span {
+        font-size: 16px;
+        font-weight: 900;
+    }
+    .field-body {
+        display: block;
+    }
+    .field-body > * {
+        width: 100%;
+    }
+    section#contact > form input[type='text'] , section#contact > form input[type='email'] , section#contact > form textarea {
+        font-size: 18px;
+    }
+    section#contact .field.name {
+        margin-bottom: 40px;
+    }
+    section#contact .field.title-email {
+        margin: 40px 0;
+    }
+    section#contact textarea {
+        height: 250px;
+        margin-bottom: 40px;
+    }
+    #email-buttons {
+        display: block;
+    }
+    #email-buttons > input {
+        width: 204px;
+        height: 54px;
+        font-size: 16px;
+
+    }
+    #email-buttons > input[type='reset']{
+        margin-right: 40px;
+    }
+}
+
+/* Desktop */
+@media all and (min-width: 1024px) {
+    section#contact {
+        padding: 165px 192px;
+    }
+    section#contact h2 {
+        font-size:36px ;
+    }
+    section#contact p.appelez-nous {
+        font-size: 20px;
+    }
+    
+    section#contact .info-contact {
+        font-size: 24px;
+        padding: 5px 13px;
+        width: 660px;
+        height: 64px;
+    }
+    section#contact .info-contact.email {
+        margin: 20px auto 60px;
+    }
+    
+    section#contact .info-contact > img {
+        width: 46px;
+        height: 46px;
+    }
+    section#contact .info-contact > span {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    section#contact > form input[type='text'] , section#contact > form input[type='email'] , section#contact > form textarea {
+        font-size: 22px;
+    }
+    #email-buttons > input {
+        font-size: 20px;
+
+    }
+}
+
+/* exception */
+@media all and (min-width: 1400px) {
+    .field-body {
+        display: flex;
+        gap: 20px;
+    }
+    section#contact .field.name {
+        margin-bottom: 0;
+    }
+}
+@media all and (min-width: 1600px) {
+    section#contact > form {
+        margin: 0 90px;
     }
 }

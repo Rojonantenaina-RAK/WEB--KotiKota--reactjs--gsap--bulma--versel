@@ -162,7 +162,7 @@ export default function Main(props) {
             <div className="field is-horizontal">
               <div className="field-body">
 
-                <div className="field">
+                <div className="field name">
                   <div className="control is-expanded"><input name='name' type="text" className="input is-info content-form" placeholder='Nom ...' required /></div>
                 </div>
 
