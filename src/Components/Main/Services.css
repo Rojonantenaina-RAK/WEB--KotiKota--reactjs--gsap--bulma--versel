@@ -66,6 +66,9 @@ section#services h3 {
     section#services {
         padding: 160px 90px;
     }
+    section#services h2 {
+        font-size: 30px;
+    }
     .section-a h3 {
         font-size: 20px;
     }

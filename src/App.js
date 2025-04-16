@@ -22,7 +22,7 @@ function App() {
 
   const scrollToSection = (id) => {
     gsap.to(window, {
-      duration: 1,
+      duration: 0.75,
       scrollTo: {
         y: `#${id}`,
         offsetY: 100,
@@ -78,13 +78,11 @@ function App() {
   }, []);
 
 
-  // 
-
 
   return (
     <div className="App has-navbar-fixed-top">
       <Header scrollToSection={scrollToSection} />
-      <Main />
+      <Main scrollToSection={scrollToSection} />
       <Footer />
     </div>
   );

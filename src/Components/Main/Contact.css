@@ -1,0 +1,76 @@
+        /* --GENERAL (Mobile First)-- */
+section#contact {
+    background-color: #EE7061;
+    padding: 70px 18px;
+}
+
+section#contact > h2 {
+    margin-left: 0;
+}
+
+section#contact p.appelez-nous {
+    font-size: 14px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+section#contact .info-contact {
+    background-color: #F5F4F5;
+    border-radius: 50px;
+    border: 3px solid #16243D;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section#contact .info-contact.email {
+    margin: 15px 0 30px;
+}
+
+section#contact .info-contact > img {
+    width: 20px;
+    height: 20px;
+}
+section#contact .info-contact > span {
+    font-size: 14px;
+    font-weight: 900;
+}
+section#contact .field.title-email {
+    margin: 15px 0;
+}
+section#contact .field .content-form {
+    font-weight: bold;
+    color: #16243D;
+}
+section#contact textarea {
+    margin-bottom: 30px;
+}
+#email-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+#email-buttons > input {
+    width: 144px;
+    font-size: 14px;
+    color: #16243D;
+    font-weight: bold;
+}
+#email-buttons > input[type='reset']{
+    border: 3px solid #16243D;
+}
+#email-buttons > input[type='button'] {
+    border: none;
+    color: #F5F4F5;
+    background-color: #16243D !important;
+}
+
+        /* --RESPONSIVE-- */
+/* Tablet */
+@media all and (min-width: 769px) {
+    section#contact {
+        padding: 165px 90px;
+    }
+    section#contact h2 {
+        font-size:30px ;
+    }
+}

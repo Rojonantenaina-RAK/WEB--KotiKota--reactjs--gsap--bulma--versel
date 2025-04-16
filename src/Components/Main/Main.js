@@ -5,17 +5,22 @@ import arrow from './../../Assets/Icons/Right-up.png';
 import Photo1 from './../../Assets/Photos/Photo 1.png';
 import Photo2 from './../../Assets/Photos/Photo 2.png';
 import Photo3 from './../../Assets/Photos/Photo 3.png';
-import logoRojoNantenaina from './../../Assets/Logos/RN (Rojo Nantenaina).png'
-import iconExperts from './../../Assets/Icons/customer-success.png'
-import iconPiggyBank from './../../Assets/Icons/Piggy-bank.png'
-import iconSolution from './../../Assets/Icons/Hand.png'
+import logoRojoNantenaina from './../../Assets/Logos/RN (Rojo Nantenaina).png';
+import iconExperts from './../../Assets/Icons/customer-success.png';
+import iconPiggyBank from './../../Assets/Icons/Piggy-bank.png';
+import iconSolution from './../../Assets/Icons/Hand.png';
+import iconTelephone from './../../Assets/Icons/Telephone.png';
+import logoWhatsApp from './../../Assets/Logos/WhatsApp.png';
+import logoGmail from './../../Assets/Logos/Gmail.png';
 
 // CSS
 import './Accueil.css';
 import './Services.css';
 import './Partenaires.css';
+import './Contact.css';
+import './Temoignages.css';
 
-export default function Main() {
+export default function Main(props) {
   return (
     <div>
         {/* section 1 : accueil */}
@@ -43,7 +48,7 @@ export default function Main() {
                 <br />
                 <i>“Restez concentré uniquement sur ce qui vous est essentiel”.</i>
               </p>
-              <a href="#Contact" className="button is-rounded">Contactez-nous</a>
+              <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">Contactez-nous</a>
             </section>
             <section className="section-ab"><img src={Photo1} alt="Assistance Virtuelle" /></section>
           </section>
@@ -58,7 +63,7 @@ export default function Main() {
                   <br/>
                   <i>“Améliorez votre relation client avec notre service d’excellence”.</i>
                 </p>
-                <a href="#Contact" className="button is-rounded">Contactez-nous</a>
+                <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">Contactez-nous</a>
               </section>
               <section className="section-ab"><img src={Photo2} alt="Service Client Externalisé" /></section>
             </section>
@@ -72,7 +77,7 @@ export default function Main() {
                 <br/>
                 <i>“Un après-vente sans stress”.</i>
               </p>
-              <a href="#Contact" className="button is-rounded">Contactez-nous</a>
+              <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">Contactez-nous</a>
             </section>
             <section className="section-ab"><img src={Photo3} alt="Gestion de SAV Externalisé" /></section>
           </section>
@@ -147,8 +152,48 @@ export default function Main() {
         </section>
 
 
-        {/* section 4 : contacts */}
+        {/* section 4 : contact */}
+        <section id="contact">
+          <h2 id='Contact'>Nous contacter</h2>
+          <p className="appelez-nous">Appelez-nous 📞<br />ou laissez-nous vos messages, avis, temoignages en nous envoyant un Email 📩</p>
+          <div className="info-contact num"><img src={iconTelephone} alt="Icone telephone" /><span>+261 34 36 193 36</span><img src={logoWhatsApp} alt="Logo WhatsApp" /></div>
+          <div className="info-contact email"><img src={logoGmail} alt="Logo Gmail" /><span>contact@kotikotasolution.com</span><span style={{visibility: 'hidden'}}></span></div>
+          <form>
+            <div className="field is-horizontal">
+              <div className="field-body">
+
+                <div className="field">
+                  <div className="control is-expanded"><input name='name' type="text" className="input is-info content-form" placeholder='Nom ...' required /></div>
+                </div>
+
+                <div className="field">
+                  <div className="control is-expanded"><input name='email' type="email" className="input is-info content-form" placeholder='Votre adresse email ...' required /></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div className="field title-email">
+              <div className="control"><input name='objet' type="text" className="input is-info content-form" placeholder='Objet de votre Email ...' required /></div>
+            </div>
+
+            <div className="field">
+              <div className="control"><textarea name="message" id="" className="textarea is-info content-form" placeholder='Votre message ...' required></textarea></div>
+            </div>
+
+            <div id='email-buttons'>
+              <input type="reset" value='Effacer' className='button' />
+              <input type="button" value='Envoyer' className='button' />
+            </div>
+
+          </form>
+        </section>
+
         {/* section 5 : temoignages */}
+        <section id="Temoignages">
+          <p className="decouvrez-temoignages">Découvrez ce que nos collaborateurs et clients ont à dire sur nous !</p>
+          {/*  */}
+        </section>
     </div>
   )
 }
