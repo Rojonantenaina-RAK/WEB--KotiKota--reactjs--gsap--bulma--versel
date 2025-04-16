@@ -64,6 +64,9 @@ section#contact textarea {
     color: #F5F4F5;
     background-color: #16243D !important;
 }
+section#contact > form input[type='text'] , section#contact > form input[type='email'] , section#contact > form textarea {
+    font-size: 14px;
+}
 
         /* --RESPONSIVE-- */
 /* Tablet */
