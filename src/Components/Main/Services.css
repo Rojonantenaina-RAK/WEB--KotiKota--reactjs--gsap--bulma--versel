@@ -9,7 +9,7 @@ section#services * {
     color: #16243D;
 }
 
-section#services h2 {
+h2 {
     font-size: 20px;
     margin-left: 18px;
     text-decoration: underline;
@@ -50,7 +50,15 @@ section#services h3 {
     height: auto;
 }
 
-
+/* Mobile */
+@media all and (max-width: 768px) {
+    .section-aa {
+        padding: 0 18px;
+    }
+    section#services {
+        padding-bottom: 0;
+    }
+}
 
 /* Tablet-only */
 @media all and (min-width: 769px) and (max-width: 1023px) {
@@ -76,7 +84,7 @@ section#services h3 {
     section#services {
         padding: 160px 192px;
     }
-    section#services h2 {
+    h2 {
         font-size: 48px;
         margin-bottom: 46px;
     }

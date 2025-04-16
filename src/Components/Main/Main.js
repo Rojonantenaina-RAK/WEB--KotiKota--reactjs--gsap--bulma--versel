@@ -5,10 +5,15 @@ import arrow from './../../Assets/Icons/Right-up.png';
 import Photo1 from './../../Assets/Photos/Photo 1.png';
 import Photo2 from './../../Assets/Photos/Photo 2.png';
 import Photo3 from './../../Assets/Photos/Photo 3.png';
+import logoRojoNantenaina from './../../Assets/Logos/RN (Rojo Nantenaina).png'
+import iconExperts from './../../Assets/Icons/customer-success.png'
+import iconPiggyBank from './../../Assets/Icons/Piggy-bank.png'
+import iconSolution from './../../Assets/Icons/Hand.png'
 
 // CSS
 import './Accueil.css';
 import './Services.css';
+import './Partenaires.css';
 
 export default function Main() {
   return (
@@ -74,6 +79,73 @@ export default function Main() {
         </section>
 
         {/* section 3 : partenaires */}
+        <section id="partenaires">
+          <h2 id='Partenaires'>Nos partenaires</h2>
+          <p className='il-nous-font-confiance'>Ils nous font confiance !</p>
+          <div className="fixed-grid has-3-cols">
+            <div className="grid">
+              <div className="cell"><span className="img"></span></div>
+              <div className="cell"><img src={logoRojoNantenaina} alt="Logo Rojo Nantenaina" /></div>
+              <div className="cell"><span className="img"></span></div>
+
+            </div>
+          </div>
+          <p className='nous-gerons-votre-support'>“Nous gérons votre support, vous gérez votre business !”</p>
+          <div className='flex-container'>
+            <div className="box">
+              <article className="media">
+                <div className="media-left">
+                  <figure className='image' style={{backgroundColor: '#16243D'}}>
+                    <img src={iconExperts} alt="Icon Experts" />
+                  </figure>
+                </div>
+                <div className="media-content">
+                  <div className="content">
+                    <h4>Expertise éprouvée</h4>
+                    <p>Des professionnels formés pour gérer votre relation client</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div className="box">
+              <article className="media">
+                <div className="media-left">
+                  <figure className='image' style={{backgroundColor: '#EE7061'}}>
+                    <img src={iconPiggyBank} alt="Icon Experts" />
+                  </figure>
+                </div>
+                <div className="media-content">
+                  <div className="content">
+                    <h4>Réduction des coûts</h4>
+                    <p>Externalisation flexible sans charge salariale</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div className="box">
+              <article className="media">
+                <div className="media-left">
+                  <figure className='image' style={{backgroundColor: '#16243D'}}>
+                    <img src={iconSolution} alt="Icon Experts" />
+                  </figure>
+                </div>
+                <div className="media-content">
+                  <div className="content">
+                    <h4>Solution sur-mesure</h4>
+                    <p>Un service adapté à votre activité</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div className="box" style={{display: 'none'}}></div>
+          </div>
+
+        </section>
+
+
         {/* section 4 : contacts */}
         {/* section 5 : temoignages */}
     </div>
