@@ -9,7 +9,7 @@ section#services * {
     color: #16243D;
 }
 
-section#services > h2 {
+section#services h2 {
     font-size: 20px;
     margin-left: 18px;
     text-decoration: underline;
@@ -57,6 +57,12 @@ section#services h3 {
     section#services {
         padding: 160px 90px;
     }
+    .section-a h3 {
+        font-size: 20px;
+    }
+    .section-a p {
+        font-size: 16px;
+    }
 
 }
 
@@ -69,5 +75,58 @@ section#services h3 {
 @media all and (min-width: 1024px) {
     section#services {
         padding: 160px 192px;
+    }
+    section#services h2 {
+        font-size: 48px;
+        margin-bottom: 46px;
+    }
+    .section-a {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 90px 0;
+    }
+    .section-a img {
+        width: 648px;
+        height: auto;
+    }
+    .section-a a.button {
+        font-size: 20px;
+        margin-left: 0;
+        margin-bottom: 0;
+        width: 213px;
+        height: 59px;
+        display: flex;
+    }
+    .section-a h3 {
+        font-size: 36px;
+    }
+    .section-a p {
+        font-size: 19px;
+    }
+    .section-a.section-reversed {
+        flex-direction: row-reverse;
+    }
+    .section-aa {
+        width: 648px;
+        height: auto;
+        padding: 0 30px;
+    }
+
+}
+
+/* Exception */
+@media all and (min-width: 1024px) and (max-width: 1250px) {
+    .section-a {
+        display: block;
+        padding: 70px 0;
+    }
+    section#services .section-a a.button {
+        margin-bottom: 44px;
+    }
+    section#services .section-a img {
+        display: block;
+        margin: 0 auto;
     }
 }

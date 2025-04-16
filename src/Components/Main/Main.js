@@ -29,8 +29,8 @@ export default function Main() {
         <section id="services">
           <h2 id='Services'>Nos services</h2>
 
-          <section className="section-a section-a1 section-non-reversed">
-            <section className="section-a1-1">
+          <section className="section-a section-a1 section-reversed">
+            <section className="section-aa">
               <h3>Assistance Virtuelle</h3>
               <p>Besoin d’un assistant personnel pour gérer vos tâches quotidiennes ? Nos experts vous aident avec :
                 <br />
@@ -40,25 +40,26 @@ export default function Main() {
               </p>
               <a href="#Contact" className="button is-rounded">Contactez-nous</a>
             </section>
-            <section className="section-a1-2"><img src={Photo1} alt="Assistance Virtuelle" /></section>
+            <section className="section-ab"><img src={Photo1} alt="Assistance Virtuelle" /></section>
           </section>
 
-          <section className="section-a section-a2 section-reversed">
-          <section className="section-a1-1">
-              <h3>Service Client Externalisé</h3>
-              <p>Nous prenons en charge votre relation client à 100% :
-                <br/>
-                <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Support client 24/7 (</strong>chat, téléphone, email<strong>)</strong><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Réponses aux questions et gestion des réclamations<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Fidélisation et satisfaction client</strong></span>
-                <br/>
-                <i>“Améliorez votre relation client avec notre service d’excellence”.</i>
-              </p>
-              <a href="#Contact" className="button is-rounded">Contactez-nous</a>
+          
+            <section className="section-a section-a2 section-non-reversed">
+            <section className="section-aa">
+                <h3>Service Client Externalisé</h3>
+                <p>Nous prenons en charge votre relation client à 100% :
+                  <br/>
+                  <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Support client 24/7 (</strong>chat, téléphone, email<strong>)</strong><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Réponses aux questions et gestion des réclamations<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Fidélisation et satisfaction client</strong></span>
+                  <br/>
+                  <i>“Améliorez votre relation client avec notre service d’excellence”.</i>
+                </p>
+                <a href="#Contact" className="button is-rounded">Contactez-nous</a>
+              </section>
+              <section className="section-ab"><img src={Photo2} alt="Service Client Externalisé" /></section>
             </section>
-            <section className="section-a1-2"><img src={Photo2} alt="Service Client Externalisé" /></section>
-          </section>
 
-          <section className="section-a section-a3 section-non-reversed">
-          <section className="section-a1-1">
+          <section className="section-a section-a3 section-reversed">
+          <section className="section-aa">
               <h3>Gestion de SAV Externalisé</h3>
               <p>Simplifiez la gestion des retours et des réclamations grâce à nos solutions :
                 <br/>
@@ -68,7 +69,7 @@ export default function Main() {
               </p>
               <a href="#Contact" className="button is-rounded">Contactez-nous</a>
             </section>
-            <section className="section-a1-2"><img src={Photo3} alt="Gestion de SAV Externalisé" /></section>
+            <section className="section-ab"><img src={Photo3} alt="Gestion de SAV Externalisé" /></section>
           </section>
         </section>
 
