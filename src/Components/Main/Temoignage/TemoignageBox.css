@@ -1,11 +1,23 @@
         /* --GENERAL (MobileFirst)-- */
 section#Temoignages .box {
     position: relative;
+    width: 300px;
+    display: inline-block;
+    margin: 0 30px;
 }
 section#Temoignages .box {
     /* modifiable for responsivity */
-    width: 300px;
     height: 320px;
+}
+section#Temoignages .box:first-of-type {
+    margin-left: 0;
+}
+section#Temoignages .box:last-of-type {
+    margin-right: 0;
+}
+section#Temoignages .temoignages-container {
+    padding: 0 10px;
+    /* position: absolute; */
 }
 section#Temoignages .box > h5 {
     font-weight: bold;
@@ -26,22 +38,10 @@ section#Temoignages .box > p , section#Temoignages .box > h5{
 
         /* --RESPONSIVITY */
 
-/*
-
-section#Temoignages .box {
-    width: 320px;
-    height: 320px;
-}
-section#Temoignages .box > p , section#Temoignages .box > h5{
-    font-size: 14px;
-}
-
-*/
 
 /* Tablet */
 @media all and (min-width: 769px) {
     section#Temoignages .box {
-        width: 350px;
         height: 370px;
     }
     section#Temoignages .box > p , section#Temoignages .box > h5{
@@ -51,8 +51,7 @@ section#Temoignages .box > p , section#Temoignages .box > h5{
 /* Tablet */
 @media all and (min-width: 1024px) {
     section#Temoignages .box {
-        width: 350px;
-        height: 420px;
+        height: 450px;
     }
     section#Temoignages .box > p , section#Temoignages .box > h5{
         font-size: 20px;

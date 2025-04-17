@@ -28,13 +28,13 @@ section#Accueil > p.description {
     font-weight: bold;
 }
 
-section#Accueil a[href='#Services'] {
+section#Accueil a.button.service {
     color: #16243D;
     background: #F5F4F5;
     border: none;
 }
 
-section#Accueil a[href='#Contact'] {
+section#Accueil a.button.contact {
     color: #F5F4F5;
     border: none;
     background-image: linear-gradient(to right, white -400%, #EE7061 100%);
@@ -73,7 +73,7 @@ section#Accueil a.button {
         flex-direction: column;
         margin: 70px 0 0;
     }
-    section#Accueil a[href='#Services'] {
+    section#Accueil a.button.service {
         margin-bottom: 10px;
     }
     section#Accueil > .buttons > a.button {

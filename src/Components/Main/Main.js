@@ -33,8 +33,8 @@ export default function Main(props) {
           <p className="description">Chez nous, nous aidons les entreprises à offrir un <span className="orange-bold">service client</span> exceptionnel, une <span className="orange-bold">assistance virtuelle</span> efficace et une <span className="orange-bold">gestion de SAV externalisée</span> fiable.
           Nous accompagnons les e-commerçants, boutiques en ligne, marques et entrepreneurs en prenant en charge la relation client et le support technique, afin qu’ils puissent se concentrer sur leur croissance.</p>
           <div className="buttons">
-            <a onClick={()=>props.scrollToSection('Services')} className='button'>En savoir plus <img src={arrow} alt="->" /></a>
-            <a onClick={()=>props.scrollToSection('Contact')} href="#Contact" className="button">Nous contacter</a>
+            <a onClick={()=>props.scrollToSection('Services')} className='button service'>En savoir plus <img src={arrow} alt="->" /></a>
+            <a onClick={()=>props.scrollToSection('Contact')} className="button contact">Nous contacter</a>
           </div>
         </section>
 
@@ -93,8 +93,8 @@ export default function Main(props) {
           <p className='il-nous-font-confiance'>Ils nous font confiance !</p>
           <div className="fixed-grid has-3-cols">
             <div className="grid">
-              <div className="cell"><span className="img"></span></div>
               <div className="cell"><img src={logoRojoNantenaina} alt="Logo Rojo Nantenaina" /></div>
+              <div className="cell"><span className="img"></span></div>
               <div className="cell"><span className="img"></span></div>
 
             </div>
@@ -197,11 +197,13 @@ export default function Main(props) {
           <p className="decouvrez-temoignages">Découvrez ce que nos collaborateurs et clients ont à dire sur nous !</p>
           <div className="temoignages-container">
             {[
-              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation !" />) ,
-              // (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation !" />) ,
-              // (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation !" />) ,
-              // (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation !" />) ,
-              // (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation !" />) ,
+              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
+              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
+              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
+              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
+              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
+              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
+              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
               ]}
           </div>
           <div className="buttons">
