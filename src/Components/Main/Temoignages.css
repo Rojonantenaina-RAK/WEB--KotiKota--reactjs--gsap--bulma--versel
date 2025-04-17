@@ -1,0 +1,13 @@
+section#Temoignages {
+    padding: 70px 18px;
+}
+p.decouvrez-temoignages {
+    font-size: 20px;
+    text-align: center;
+}
+section#Temoignages > .buttons {
+    justify-content: center;
+}
+section#Temoignages > .buttons > button {
+    border-radius: 50%;
+}
