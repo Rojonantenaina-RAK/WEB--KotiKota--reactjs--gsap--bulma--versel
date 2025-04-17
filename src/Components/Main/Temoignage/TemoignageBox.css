@@ -1,0 +1,60 @@
+        /* --GENERAL (MobileFirst)-- */
+section#Temoignages .box {
+    position: relative;
+}
+section#Temoignages .box {
+    /* modifiable for responsivity */
+    width: 300px;
+    height: 320px;
+}
+section#Temoignages .box > h5 {
+    font-weight: bold;
+}
+section#Temoignages .box > p.stars {
+    padding: 5px 0 10px;
+}
+section#Temoignages .box > p.name {
+    position: absolute;
+    bottom: 20px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 50%);
+}
+section#Temoignages .box > p , section#Temoignages .box > h5{
+    /* modifiable for responsivity */
+    font-size: 14px;
+}
+
+        /* --RESPONSIVITY */
+
+/*
+
+section#Temoignages .box {
+    width: 320px;
+    height: 320px;
+}
+section#Temoignages .box > p , section#Temoignages .box > h5{
+    font-size: 14px;
+}
+
+*/
+
+/* Tablet */
+@media all and (min-width: 769px) {
+    section#Temoignages .box {
+        width: 350px;
+        height: 370px;
+    }
+    section#Temoignages .box > p , section#Temoignages .box > h5{
+        font-size: 16px;
+    }
+}
+/* Tablet */
+@media all and (min-width: 1024px) {
+    section#Temoignages .box {
+        width: 350px;
+        height: 420px;
+    }
+    section#Temoignages .box > p , section#Temoignages .box > h5{
+        font-size: 20px;
+    }
+}

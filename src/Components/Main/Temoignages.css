@@ -1,12 +1,28 @@
+        /* --GENERAL (Mobile First) */
+
 section#Temoignages {
-    padding: 70px 18px;
+    background-color: #F5F4F5;
+}
+section#Temoignages {
+    /* modifiable for responsivity */
+    padding: 70px 0px;
 }
 p.decouvrez-temoignages {
-    font-size: 20px;
     text-align: center;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+p.decouvrez-temoignages {
+    /* modifiable for responsivity */
+    font-size: 20px;
+    margin-bottom: 65px;
 }
 section#Temoignages > .buttons {
     justify-content: center;
+}
+section#Temoignages > .buttons {
+    /* modifiable for responsivity */
+    margin-top: 40px;
 }
 section#Temoignages > .buttons > button {
     border-radius: 50%;
