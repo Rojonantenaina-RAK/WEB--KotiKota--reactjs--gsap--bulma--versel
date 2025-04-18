@@ -16,7 +16,7 @@ section#Temoignages .box:last-of-type {
     margin-right: 0;
 }
 section#Temoignages .temoignages-container {
-    padding: 0 10px 25px;
+    padding: 0 20px 25px;
     /* position: absolute; */
 }
 section#Temoignages .box > h5 {

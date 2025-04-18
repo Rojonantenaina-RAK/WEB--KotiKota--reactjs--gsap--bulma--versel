@@ -83,7 +83,7 @@ function App() {
     <div className="App has-navbar-fixed-top">
       <Header scrollToSection={scrollToSection} />
       <Main scrollToSection={scrollToSection} />
-      <Footer />
+      <Footer scrollToSection={scrollToSection}/>
     </div>
   );
 }

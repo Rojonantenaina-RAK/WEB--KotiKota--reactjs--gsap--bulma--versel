@@ -29,7 +29,9 @@ export default function Main(props) {
   const containerRef = useRef(null);
   const [nBox, setNBox] = useState(0); // n = number of <Box /> in Temoignages section
 
-  const scrollAmount = 10+300-10+60;
+  const wBox = 300; // width of Box
+  const m2 = 30*2; // Margin left ou right *2 du Box
+  const scrollAmount = wBox + m2;
 
   useEffect(() => {
     // Compte automatique du nombre de .box
