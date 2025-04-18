@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 // Images
 import arrow from './../../Assets/Icons/Right-up.png';
@@ -24,6 +24,34 @@ import './Temoignages.css';
 import Box from './Temoignage/TemoignageBox';
 
 export default function Main(props) {
+
+  const [index, setIndex] = useState(0);
+  const containerRef = useRef(null);
+  const [nBox, setNBox] = useState(0); // n = number of <Box /> in Temoignages section
+
+  const scrollAmount = 10+300-10+60;
+
+  useEffect(() => {
+    // Compte automatique du nombre de .box
+    if (containerRef.current) {
+      const count = containerRef.current.querySelectorAll(".box").length;
+      setNBox(count);
+    }
+  }, []);
+
+  const handleNext = () => {
+    if (index > -(nBox - 1)) {
+      setIndex((prev) => prev - 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (index < 0) {
+      setIndex((prev) => prev + 1);
+    }
+  };
+
+
   return (
     <div>
         {/* section 1 : accueil */}
@@ -195,20 +223,21 @@ export default function Main(props) {
         {/* section 5 : temoignages */}
         <section id="Temoignages">
           <p className="decouvrez-temoignages">Découvrez ce que nos collaborateurs et clients ont à dire sur nous !</p>
-          <div className="temoignages-container">
-            {[
-              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
-              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
-              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
-              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
-              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
-              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
-              (<Box resumee="Extrêmement satisfait !" note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />) ,
-              ]}
+          <div className="temoignages-wrapper">
+            <div className="temoignages-container" ref={containerRef} style={{
+                                                                              marginLeft: `${index * scrollAmount}px`,
+                                                                              width: `${nBox * scrollAmount}px`,
+                                                                              transition: "margin-left 0.5s ease",
+                                                                            }}>
+              {Array.from({ length: 7 }).map((_, i) => (
+                <Box key={i} resumee="Extrêmement satisfait !"  note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />
+              ))}
+
+            </div>
           </div>
           <div className="buttons">
-            <button className="button">&lt;</button>
-            <button className="button">&gt;</button>
+            <button className="button" onClick={handlePrev}>&lt;</button>
+            <button className="button" onClick={handleNext}>&gt;</button>
           </div>
         </section>
     </div>

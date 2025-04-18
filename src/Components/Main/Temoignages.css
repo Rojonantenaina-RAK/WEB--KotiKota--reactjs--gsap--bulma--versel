@@ -2,11 +2,22 @@
 
 section#Temoignages {
     background-color: #F5F4F5;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
-
+.temoignages-wrapper {
+    overflow: hidden; /* masque le dépassement */
+    width: 100%;
+  }
 section#Temoignages {
     /* modifiable for responsivity */
     padding: 70px 0px;
+}
+section#Temoignages .temoignages-container {
+    display: flex;
+    flex-direction: row;
+    transition: margin-left 0.5s ease;
 }
 p.decouvrez-temoignages {
     text-align: center;
