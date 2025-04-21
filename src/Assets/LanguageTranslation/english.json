@@ -1,0 +1,64 @@
+{
+    "navServicesLink" : "Our services",
+    "navPartenairesLink" : "Partners",
+    "navContactLink" : "Contact us",
+
+    "accueilBienvenue" : "Welcome to",
+    "accueilPartenaire" : "Your Partner in Customer Assistance and Support",
+    "block_intro": "We help businesses deliver exceptional",
+    "block_service_client": "customer service",
+    "block_middle_1": ", efficient",
+    "block_assistance_virtuelle": "virtual assistance",
+    "block_middle_2": ", and reliable",
+    "block_sav": "outsourced support",
+    "block_outro": ". We support e-commerce businesses, online shops, brands, and entrepreneurs by handling customer relationships and technical support, so they can focus on growing.",
+    "accueilEnSavoirPlus": "Learn more",
+    "accueilNousContacter" : "Contact us",
+
+    "servicesTitle": "Our Services",
+    "servicesAssistanceVirtuelle": "Virtual Assistance",
+    "serviceAVintro": "Need a personal assistant to manage your daily tasks? Our experts assist you with:",
+    "AV1": "Managing your emails and schedules",
+    "AV2": "Online customer support",
+    "AV2a": "chat, email, social media",
+    "AVcitation": "Stay focused on what truly matters to you",
+    
+    "servicesContactezNous": "Contact Us",
+    "servicesSCE": "Outsourced Customer Service",
+    "SCEintro": "We fully manage your customer relations:",
+    "SCE1": "24/7 customer support",
+    "SCE1a": "chat, phone, email",
+    "SCE2": "Answering queries and handling complaints",
+    "SCE3": "Customer loyalty and satisfaction",
+    "SCEcitation": "Enhance your customer relations with our excellence-driven service",
+    
+    "servicesGestionDeSAV": "Outsourced After-Sales Service Management",
+    "SAVintro": "Simplify returns and claims management with our solutions:",
+    "SAV1": "Tracking product returns and exchanges",
+    "SAV2": "Technical and logistical support",
+    "SAV3": "Simplified repairs and refunds",
+    "SAVcitation": "A stress-free after-sales experience",
+    
+    "partenairesTitle": "Our Partners",
+    "confiance": "Trusted by the best!",
+    "nousGerons": "We handle your support, you manage your business!",
+    
+    "expertise1": "Proven Expertise",
+    "expertise1detail": "Trained professionals managing your customer relations",
+    "expertise2": "Cost Reduction",
+    "expertise2detail": "Flexible outsourcing with no payroll burden",
+    "expertise3": "Tailored Solutions",
+    "expertise3detail": "A service customized to your business needs",
+    
+    "contactTitle": "Contact Us",
+    "appellez-nous": "Call Us",
+    "laisser-email": "or leave us your messages, feedback, and testimonials by sending us an email",
+    "buttonEffacer": "Clear",
+    "buttonEnvoyer": "Send",
+    
+    "decouvrezTemoignages": "Discover what our partners and clients have to say about us!",
+    
+    "footerPartenaires": "Partners",
+    "footerDeveloppeur": "Developer"
+  
+}

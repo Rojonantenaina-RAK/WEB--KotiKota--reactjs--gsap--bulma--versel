@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useEffect, useRef, useState, useContext} from 'react'
 
 // CSS
 import './Header.css'
@@ -6,9 +6,18 @@ import './Header.css'
 // Images
 import iconLanguage from './../../Assets/Icons/Language.png'
 
+// Contexts
+import { LanguageContext } from './../../Context/LanguageContext';
 
 export default function Header(props) {
 
+    // Traduction language
+    const { language, setLanguage, t } = useContext(LanguageContext);
+    const handleChange = (e) => {
+      setLanguage(e.target.value);
+    };
+
+    // Smooth Scroll
     function scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -69,14 +78,14 @@ export default function Header(props) {
 
         <div ref={menuRef} className={`navbar-menu ${stateIsActive ? 'is-active' : ''}`}>
             <div className="navbar-end">
-                <a onClick={()=>props.scrollToSection('Services')} className='custom-navbar-item'>Nos services</a>
-                <a onClick={()=>props.scrollToSection('Partenaires')} className='custom-navbar-item'>Partenaires</a>
+                <a onClick={()=>props.scrollToSection('Services')} className='custom-navbar-item'>{t('navServicesLink')}</a>
+                <a onClick={()=>props.scrollToSection('Partenaires')} className='custom-navbar-item'>{t('navPartenairesLink')}</a>
                 <div className="is-flex">
-                    <a id='linkToContact' onClick={()=>props.scrollToSection('Contact')} className='button'>Nous contacter</a>
+                    <a id='linkToContact' onClick={()=>props.scrollToSection('Contact')} className='button'>{t('navContactLink')}</a>
                     <div className="control has-icons-left">
                         <span className="icon is-left"><img src={iconLanguage} alt="Langue" /></span>
                         <div className="select is-dark">
-                            <select name="language" id="language">
+                            <select name="language" id="language" value={language} onChange={handleChange}>
                                 <option value="french">Fr</option>
                                 <option value="english">En</option>
                             </select>

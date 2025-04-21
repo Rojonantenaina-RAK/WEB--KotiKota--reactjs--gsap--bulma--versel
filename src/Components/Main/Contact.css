@@ -50,16 +50,16 @@ section#contact textarea {
     display: flex;
     justify-content: space-between;
 }
-#email-buttons > input {
+#email-buttons > button {
     width: 144px;
     font-size: 14px;
     color: #16243D;
     font-weight: bold;
 }
-#email-buttons > input[type='reset']{
+#email-buttons > button[type='reset']{
     border: 3px solid #16243D;
 }
-#email-buttons > input[type='button'] {
+#email-buttons > button[type='button'] {
     border: none;
     color: #F5F4F5;
     background-color: #16243D !important;
@@ -125,13 +125,13 @@ section#contact > form input[type='text'] , section#contact > form input[type='e
     #email-buttons {
         display: block;
     }
-    #email-buttons > input {
+    #email-buttons > button {
         width: 204px;
         height: 54px;
         font-size: 16px;
 
     }
-    #email-buttons > input[type='reset']{
+    #email-buttons > button[type='reset']{
         margin-right: 40px;
     }
 }
@@ -169,7 +169,7 @@ section#contact > form input[type='text'] , section#contact > form input[type='e
     section#contact > form input[type='text'] , section#contact > form input[type='email'] , section#contact > form textarea {
         font-size: 22px;
     }
-    #email-buttons > input {
+    #email-buttons > button {
         font-size: 20px;
 
     }

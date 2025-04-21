@@ -23,7 +23,13 @@ import './Temoignages.css';
 // Components
 import Box from './Temoignage/TemoignageBox';
 
+// Hooks
+import { useTranslation } from './../../Context/hookUseTranslation';
+
+
 export default function Main(props) {
+
+  const t = useTranslation();
 
   const [index, setIndex] = useState(0);
   const containerRef = useRef(null);
@@ -58,30 +64,35 @@ export default function Main(props) {
     <div>
         {/* section 1 : accueil */}
         <section id="Accueil" style={{backgroundColor: '#16243D'}}>
-          <p className='bienvenue'>Bienvenue chez <span id="logoKoti"></span><span id="logoKota"></span></p>
-          <p className="presentation">Votre Partenaire en Assistance et Support Client</p>
-          <p className="description">Chez nous, nous aidons les entreprises à offrir un <span className="orange-bold">service client</span> exceptionnel, une <span className="orange-bold">assistance virtuelle</span> efficace et une <span className="orange-bold">gestion de SAV externalisée</span> fiable.
-          Nous accompagnons les e-commerçants, boutiques en ligne, marques et entrepreneurs en prenant en charge la relation client et le support technique, afin qu’ils puissent se concentrer sur leur croissance.</p>
+          <p className='bienvenue'>{t('accueilBienvenue')} <span id="logoKoti"></span><span id="logoKota"></span></p>
+          <p className="presentation">{t('accueilPartenaire')}</p>
+          <p className="description">
+            {t('block_intro')} <span className="orange-bold">{t('block_service_client')}</span>{' '}
+            {t('block_middle_1')} <span className="orange-bold">{t('block_assistance_virtuelle')}</span>{' '}
+            {t('block_middle_2')} <span className="orange-bold">{t('block_sav')}</span> {t('block_outro')}
+
+          </p>
           <div className="buttons">
-            <a onClick={()=>props.scrollToSection('Services')} className='button service'>En savoir plus <img src={arrow} alt="->" /></a>
-            <a onClick={()=>props.scrollToSection('Contact')} className="button contact">Nous contacter</a>
+            <a onClick={()=>props.scrollToSection('Services')} className='button service'>{t('accueilEnSavoirPlus')} <img src={arrow} alt="->" /></a>
+            <a onClick={()=>props.scrollToSection('Contact')} className="button contact">{t('accueilNousContacter')}</a>
           </div>
         </section>
 
         {/* section 2 : services */}
         <section id="services">
-          <h2 id='Services'>Nos services</h2>
+          <h2 id='Services'>{t('servicesTitle')}</h2>
 
           <section className="section-a section-a1 section-reversed">
             <section className="section-aa">
-              <h3>Assistance Virtuelle</h3>
-              <p>Besoin d’un assistant personnel pour gérer vos tâches quotidiennes ? Nos experts vous aident avec :
+              <h3>{t('servicesAssistanceVirtuelle')}</h3>
+              <p>
+                {t('serviceAVintro')}
                 <br />
-                <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  La gestion de vos emails et agendas<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Le support client en ligne (</strong>chat, email, réseaux sociaux <strong>)</strong></span>
+                <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  {t('AV1')}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  {t('AV2')} (</strong>{t('AV2a')} <strong>)</strong></span>
                 <br />
-                <i>“Restez concentré uniquement sur ce qui vous est essentiel”.</i>
+                <i>“{t('AVcitation')}”.</i>
               </p>
-              <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">Contactez-nous</a>
+              <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">{t('servicesContactezNous')}</a>
             </section>
             <section className="section-ab"><img src={Photo1} alt="Assistance Virtuelle" /></section>
           </section>
@@ -89,28 +100,30 @@ export default function Main(props) {
           
             <section className="section-a section-a2 section-non-reversed">
             <section className="section-aa">
-                <h3>Service Client Externalisé</h3>
-                <p>Nous prenons en charge votre relation client à 100% :
+                <h3>{t('servicesSCE')}</h3>
+                <p>
+                  {t('SCEintro')}
                   <br/>
-                  <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Support client 24/7 (</strong>chat, téléphone, email<strong>)</strong><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Réponses aux questions et gestion des réclamations<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Fidélisation et satisfaction client</strong></span>
+                  <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  {t('SCE1')} (</strong>{t('SCE1a')}<strong>)</strong><br/><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  {t('SCE2')}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  {t('SCE3')}</strong></span>
                   <br/>
-                  <i>“Améliorez votre relation client avec notre service d’excellence”.</i>
+                  <i>“{t('SCEcitation')}”.</i>
                 </p>
-                <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">Contactez-nous</a>
+                <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">{t('servicesContactezNous')}</a>
               </section>
               <section className="section-ab"><img src={Photo2} alt="Service Client Externalisé" /></section>
             </section>
 
           <section className="section-a section-a3 section-reversed">
           <section className="section-aa">
-              <h3>Gestion de SAV Externalisé</h3>
-              <p>Simplifiez la gestion des retours et des réclamations grâce à nos solutions :
+              <h3></h3>
+              <p>
+                {t('SAVintro')}
                 <br/>
-                <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Suivi des retours et échanges de produits<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Assistance technique et logistique<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  Réparations et remboursements simplifiés</strong></span>
+                <span className="services-details"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  {t('SAV1')}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  {t('SAV2')}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✔  {t('SAV3')}</strong></span>
                 <br/>
-                <i>“Un après-vente sans stress”.</i>
+                <i>“{t('SAVcitation')}”.</i>
               </p>
-              <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">Contactez-nous</a>
+              <a onClick={()=>props.scrollToSection('Contact')} className="button is-rounded">{t('servicesContactezNous')}</a>
             </section>
             <section className="section-ab"><img src={Photo3} alt="Gestion de SAV Externalisé" /></section>
           </section>
@@ -119,8 +132,8 @@ export default function Main(props) {
 
         {/* section 3 : partenaires */}
         <section id="partenaires">
-          <h2 id='Partenaires'>Nos partenaires</h2>
-          <p className='il-nous-font-confiance'>Ils nous font confiance !</p>
+          <h2 id='Partenaires'>{t('partenairesTitle')}</h2>
+          <p className='il-nous-font-confiance'>{t('confiance')}</p>
           <div className="fixed-grid has-3-cols">
             <div className="grid">
               <div className="cell"><img src={logoRojoNantenaina} alt="Logo Rojo Nantenaina" /></div>
@@ -129,7 +142,7 @@ export default function Main(props) {
 
             </div>
           </div>
-          <p className='nous-gerons-votre-support'>“Nous gérons votre support, vous gérez votre business !”</p>
+          <p className='nous-gerons-votre-support'>“{t('nousGerons')}”</p>
           <div className='flex-container'>
             <div className="box">
               <article className="media">
@@ -140,8 +153,8 @@ export default function Main(props) {
                 </div>
                 <div className="media-content">
                   <div className="content">
-                    <h4>Expertise éprouvée</h4>
-                    <p>Des professionnels formés pour gérer votre relation client</p>
+                    <h4>{t('expertise1')}</h4>
+                    <p>{t('expertise1detail')}</p>
                   </div>
                 </div>
               </article>
@@ -156,8 +169,8 @@ export default function Main(props) {
                 </div>
                 <div className="media-content">
                   <div className="content">
-                    <h4>Réduction des coûts</h4>
-                    <p>Externalisation flexible sans charge salariale</p>
+                    <h4>{t('expertise2')}</h4>
+                    <p>{t('expertise2detail')}</p>
                   </div>
                 </div>
               </article>
@@ -172,8 +185,8 @@ export default function Main(props) {
                 </div>
                 <div className="media-content">
                   <div className="content">
-                    <h4>Solution sur-mesure</h4>
-                    <p>Un service adapté à votre activité</p>
+                    <h4>{t('expertise3')}</h4>
+                    <p>{t('expertise3detail')}</p>
                   </div>
                 </div>
               </article>
@@ -187,8 +200,8 @@ export default function Main(props) {
 
         {/* section 4 : contact */}
         <section id="contact">
-          <h2 id='Contact'>Nous contacter</h2>
-          <p className="appelez-nous">Appelez-nous 📞<br />ou laissez-nous vos messages, avis, temoignages en nous envoyant un Email 📩</p>
+          <h2 id='Contact'>{t('contactTitle')}</h2>
+          <p className="appelez-nous">{t('appellez-nous')} 📞<br />{t('laisser-email')} 📩</p>
           <div className="info-contact num"><img src={iconTelephone} alt="Icone telephone" /><span>+261 34 36 193 36</span><img src={logoWhatsApp} alt="Logo WhatsApp" /></div>
           <div className="info-contact email"><img src={logoGmail} alt="Logo Gmail" /><span>contact@kotikotasolution.com</span><span style={{visibility: 'hidden'}}></span></div>
           <form>
@@ -196,27 +209,27 @@ export default function Main(props) {
               <div className="field-body">
 
                 <div className="field name">
-                  <div className="control is-expanded"><input name='name' type="text" className="input is-info content-form" placeholder='Nom ...' required /></div>
+                  <div className="control is-expanded"><input name='name' type="text" className="input is-info content-form" placeholder='Name ...' required /></div>
                 </div>
 
                 <div className="field">
-                  <div className="control is-expanded"><input name='email' type="email" className="input is-info content-form" placeholder='Votre adresse email ...' required /></div>
+                  <div className="control is-expanded"><input name='email' type="email" className="input is-info content-form" placeholder='Email ...' required /></div>
                 </div>
 
               </div>
             </div>
 
             <div className="field title-email">
-              <div className="control"><input name='objet' type="text" className="input is-info content-form" placeholder='Objet de votre Email ...' required /></div>
+              <div className="control"><input name='objet' type="text" className="input is-info content-form" placeholder='Object ...' required /></div>
             </div>
 
             <div className="field">
-              <div className="control"><textarea name="message" id="" className="textarea is-info content-form" placeholder='Votre message ...' required></textarea></div>
+              <div className="control"><textarea name="message" id="" className="textarea is-info content-form" placeholder='Message ...' required></textarea></div>
             </div>
 
             <div id='email-buttons'>
-              <input type="reset" value='Effacer' className='button' />
-              <input type="button" value='Envoyer' className='button' />
+              <button type='reset' className='button'>{t('buttonEffacer')}</button>
+              <button type='button' className='button'>{t('buttonEnvoyer')}</button>
             </div>
 
           </form>
@@ -224,7 +237,7 @@ export default function Main(props) {
 
         {/* section 5 : temoignages */}
         <section id="Temoignages">
-          <p className="decouvrez-temoignages">Découvrez ce que nos collaborateurs et clients ont à dire sur nous !</p>
+          <p className="decouvrez-temoignages">{t('decouvrezTemoignages')}</p>
           <div className="temoignages-wrapper">
             <div className="temoignages-container" ref={containerRef} style={{
                                                                               marginLeft: `${index * scrollAmount}px`,
