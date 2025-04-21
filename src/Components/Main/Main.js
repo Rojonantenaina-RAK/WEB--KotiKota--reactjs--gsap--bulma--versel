@@ -26,11 +26,40 @@ import Box from './Temoignage/TemoignageBox';
 // Hooks
 import { useTranslation } from './../../Context/hookUseTranslation';
 
+// Modules
+import emailjs from "emailjs-com"
+
+
 
 export default function Main(props) {
 
+  // Contact Form (sending email)
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+  
+    emailjs.sendForm(
+      'service_8ep1a9w',        // ID du service
+      'template_r28j2cm',       // ID du template
+      form.current,             // Formulaire
+      'G2x-nhYF6fvBfDxzd'         // Clé publique (user ID)
+    ).then(
+      (result) => {
+        console.log(result.text);
+        alert("Email envoyé !");
+        form.current.reset();
+      },
+      (error) => {
+        console.error(error.text);
+        alert("Une erreur s’est produite.");
+      }
+    );
+  };
+
+  // Translation
   const t = useTranslation();
 
+  // Temoignage
   const [index, setIndex] = useState(0);
   const containerRef = useRef(null);
   const [nBox, setNBox] = useState(0); // n = number of <Box /> in Temoignages section
@@ -204,7 +233,7 @@ export default function Main(props) {
           <p className="appelez-nous">{t('appellez-nous')} 📞<br />{t('laisser-email')} 📩</p>
           <div className="info-contact num"><img src={iconTelephone} alt="Icone telephone" /><span>+261 34 36 193 36</span><img src={logoWhatsApp} alt="Logo WhatsApp" /></div>
           <div className="info-contact email"><img src={logoGmail} alt="Logo Gmail" /><span>contact@kotikotasolution.com</span><span style={{visibility: 'hidden'}}></span></div>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="field is-horizontal">
               <div className="field-body">
 
@@ -220,7 +249,7 @@ export default function Main(props) {
             </div>
 
             <div className="field title-email">
-              <div className="control"><input name='objet' type="text" className="input is-info content-form" placeholder='Object ...' required /></div>
+              <div className="control"><input name='object' type="text" className="input is-info content-form" placeholder='Object ...' required /></div>
             </div>
 
             <div className="field">
@@ -229,7 +258,7 @@ export default function Main(props) {
 
             <div id='email-buttons'>
               <button type='reset' className='button'>{t('buttonEffacer')}</button>
-              <button type='button' className='button'>{t('buttonEnvoyer')}</button>
+              <button type='submit' className='button'>{t('buttonEnvoyer')}</button>
             </div>
 
           </form>

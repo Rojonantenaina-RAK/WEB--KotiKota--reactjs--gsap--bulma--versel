@@ -59,7 +59,7 @@ section#contact textarea {
 #email-buttons > button[type='reset']{
     border: 3px solid #16243D;
 }
-#email-buttons > button[type='button'] {
+#email-buttons > button[type='submit'] {
     border: none;
     color: #F5F4F5;
     background-color: #16243D !important;

@@ -32,7 +32,7 @@ export default function Footer(props) {
         <div className="link link2">
           <a href="">Blog</a>
           <a href="">Designers</a>
-          <a href="">{t('footerDeveloppeur')}</a>
+          <a href="https://bento.me/rojo-nanteh">{t('footerDeveloppeur')}</a>
         </div>
       </div>
       
