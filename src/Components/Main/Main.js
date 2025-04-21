@@ -32,6 +32,57 @@ import emailjs from "emailjs-com"
 
 
 export default function Main(props) {
+  
+  // Temoignage
+  const temoignages = [
+    {
+      resumee: "Extrêmement satisfait !",
+      note: '5',
+      nom: "Anonyme",
+      contenu: "Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation !"
+    },
+    {
+      resumee: "Service rapide",
+      note: '4',
+      nom: "Jean",
+      contenu: "Service très rapide et efficace. J’ai pu mettre en place une solution en un temps record. Merci à toute l’équipe !"
+    },
+    {
+      resumee: "Bonne communication",
+      note: '5',
+      nom: "Sophie Laurent",
+      contenu: "J’ai particulièrement apprécié la communication. Toujours à l’écoute et très professionnels. Une super expérience."
+    }
+  ];
+
+  const [index, setIndex] = useState(0);
+  const containerRef = useRef(null);
+  const [nBox, setNBox] = useState(0); // n = number of <Box /> in Temoignages section
+
+  const wBox = 300; // width of Box
+  const m2 = 30*2; // Margin left ou right *2 du Box
+  const scrollAmount = wBox + m2;
+
+  useEffect(() => {
+    // Compte automatique du nombre de .box
+    if (containerRef.current) {
+      const countBox = containerRef.current.querySelectorAll(".box").length;
+      setNBox(countBox);
+    }
+  }, []);
+
+  const handleNext = () => {
+    if (index > -(nBox - 1)) {
+      setIndex((prev) => prev - 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (index < 0) {
+      setIndex((prev) => prev + 1);
+    }
+  };
+
 
   // Contact Form (sending email)
   const form = useRef();
@@ -58,35 +109,6 @@ export default function Main(props) {
 
   // Translation
   const t = useTranslation();
-
-  // Temoignage
-  const [index, setIndex] = useState(0);
-  const containerRef = useRef(null);
-  const [nBox, setNBox] = useState(0); // n = number of <Box /> in Temoignages section
-
-  const wBox = 300; // width of Box
-  const m2 = 30*2; // Margin left ou right *2 du Box
-  const scrollAmount = wBox + m2;
-
-  useEffect(() => {
-    // Compte automatique du nombre de .box
-    if (containerRef.current) {
-      const count = containerRef.current.querySelectorAll(".box").length;
-      setNBox(count);
-    }
-  }, []);
-
-  const handleNext = () => {
-    if (index > -(nBox - 1)) {
-      setIndex((prev) => prev - 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (index < 0) {
-      setIndex((prev) => prev + 1);
-    }
-  };
 
 
   return (
@@ -165,9 +187,8 @@ export default function Main(props) {
           <p className='il-nous-font-confiance'>{t('confiance')}</p>
           <div className="fixed-grid has-3-cols">
             <div className="grid">
+              {/*  Logos Partenaires*/}
               <div className="cell"><img src={logoRojoNantenaina} alt="Logo Rojo Nantenaina" /></div>
-              <div className="cell"><span className="img"></span></div>
-              <div className="cell"><span className="img"></span></div>
 
             </div>
           </div>
@@ -231,7 +252,7 @@ export default function Main(props) {
         <section id="contact">
           <h2 id='Contact'>{t('contactTitle')}</h2>
           <p className="appelez-nous">{t('appellez-nous')} 📞<br />{t('laisser-email')} 📩</p>
-          <div className="info-contact num"><img src={iconTelephone} alt="Icone telephone" /><span>+261 34 36 193 36</span><img src={logoWhatsApp} alt="Logo WhatsApp" /></div>
+          <div className="info-contact num"><img src={iconTelephone} alt="Icone telephone" /><span>+261 37 68 557 66</span><img src={logoWhatsApp} alt="Logo WhatsApp" /></div>
           <div className="info-contact email"><img src={logoGmail} alt="Logo Gmail" /><span>contact@kotikotasolution.com</span><span style={{visibility: 'hidden'}}></span></div>
           <form ref={form} onSubmit={sendEmail}>
             <div className="field is-horizontal">
@@ -273,9 +294,15 @@ export default function Main(props) {
                                                                               width: `${nBox * scrollAmount}px`,
                                                                               transition: "margin-left 0.5s ease",
                                                                             }}>
-              {Array.from({ length: 7 }).map((_, i) => (
-                <Box key={i} resumee="Extrêmement satisfait !"  note='5' nom='Anonyme' contenu="Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!" />
-              ))}
+                        {temoignages.map((t, i) => (
+            <Box
+              key={i}
+              resumee={t.resumee}
+              note={t.note}
+              nom={t.nom}
+              contenu={t.contenu}
+            />
+          ))}
 
             </div>
           </div>

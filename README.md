@@ -1,3 +1,5 @@
+## Hello and welcome to KotiKota !
+
 - For local test, run :
 
 ```bash
