@@ -66,7 +66,13 @@ footer .line {
     border-top: 3px solid #F5F4F5;
     border-bottom: 3px solid #F5F4F5;
 }
-
+footer .dropdown-content {
+    width: 13rem;
+    background: #F5F4F5;
+}
+footer .dropdown-content > a {
+    color: #16243D;
+}
 
         /* --RESPONSIVE-- */
 /* Tablet */

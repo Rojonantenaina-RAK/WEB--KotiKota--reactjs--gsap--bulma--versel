@@ -39,13 +39,13 @@ export default function Main(props) {
       resumee: "Extrêmement satisfait !",
       note: '5',
       nom: "Anonyme",
-      contenu: "Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation !"
+      contenu: "Je suis extrêmement satisfait du service offert par Koti Kota. La communication avec l’équipe a été fluide. Grâce à eux, mon service client est bien géré et mes clients sont ravis. Je recommande sans hésitation!"
     },
     {
       resumee: "Service rapide",
       note: '4',
-      nom: "Jean",
-      contenu: "Service très rapide et efficace. J’ai pu mettre en place une solution en un temps record. Merci à toute l’équipe !"
+      nom: "Max J.",
+      contenu: "Service rapide et efficace. J’ai pu mettre en place une solution en un temps record. Merci à toute l’équipe!"
     },
     {
       resumee: "Bonne communication",

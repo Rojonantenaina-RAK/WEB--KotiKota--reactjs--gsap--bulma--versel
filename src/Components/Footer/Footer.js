@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { useState } from 'react'
 
 // CSS
 import './Footer.css'
@@ -12,6 +12,13 @@ import { useTranslation } from './../../Context/hookUseTranslation';
 export default function Footer(props) {
 
   const t = useTranslation();
+
+  const [isDesignerDropdownActive, setIsDesignerDropdownActive] = useState(false);
+
+  const toggleDesignerDropdown = () => {
+    setIsDesignerDropdownActive(prev => !prev);
+  };
+
 
   return (
     <footer>
@@ -31,8 +38,21 @@ export default function Footer(props) {
 
         <div className="link link2">
           <a href="">Blog</a>
-          <a href="">Designers</a>
           <a href="https://bento.me/rojo-nanteh">{t('footerDeveloppeur')}</a>
+          <div id='drop' className={`dropdown is-hoverable ${isDesignerDropdownActive ? 'is-active' : ''}`}>
+            <div className="dropdown-trigger">
+              <a onClick={toggleDesignerDropdown}>Designer</a>
+            </div>
+            <div id="dropdown-menu" className="dropdown-menu">
+              <div className="dropdown-content">
+                <a href="https://web.facebook.com/people/Micha%C3%ABl-Judit/100089924790657/">Logo & Charte graphique</a>
+                <hr className="dropdown-divider" />
+                <a href="https://bento.me/rojo-nanteh">Web Design</a>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
       
